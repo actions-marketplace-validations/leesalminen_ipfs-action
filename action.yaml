@@ -44,6 +44,9 @@ inputs:
   pinataPinName:
     description: '[pinata] Human name for pin'
     required: false
+  key:
+    description: "IPNS Key Name to Use"
+    required: false
 outputs:
   hash:
     description: 'IPFS root hash'
