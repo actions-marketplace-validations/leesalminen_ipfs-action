@@ -8,7 +8,7 @@ module.exports = {
     return create({ host, port, protocol, timeout, headers });
   },
   upload: async (api, options) => {
-    const { path, timeout, verbose } = options;
+    const { path, timeout, verbose, key } = options;
 
     const files = globSource(path, { recursive: true });
     const { cid } = await api.add(files, { pin: true, timeout });
@@ -18,6 +18,9 @@ module.exports = {
 
     if (verbose)
       console.log(cid);
+
+    if (key)
+      const { publish } = await api.name.publish(cid, {key: key});
 
     return cid;
   }

@@ -16,6 +16,7 @@ async function run() {
     const pinataPinName = core.getInput('pinataPinName');
     const timeout = core.getInput('timeout');
     const verbose = (core.getInput('verbose') === 'true');
+    const key = core.getInput('key');
 
     const options = {
       path,
@@ -28,7 +29,8 @@ async function run() {
       pinataSecret,
       pinataPinName,
       timeout,
-      verbose 
+      verbose,
+      key
     };
     const hash = await uploader.upload(options).catch((err) => { throw err; });
     core.setOutput('hash', hash.toString());
