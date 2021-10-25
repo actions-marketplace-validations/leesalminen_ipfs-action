@@ -1,4 +1,4 @@
-name: 'Upload to IPFS'
+name: 'Upload to IPFS with IPNS'
 description: 'The GitHub Action allows uploading DApps or content to IPFS. It supports IPFS, Pinata, Infura pinning services.'
 branding:
   icon: 'upload-cloud'
