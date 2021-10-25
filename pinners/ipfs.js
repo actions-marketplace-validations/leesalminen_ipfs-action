@@ -19,8 +19,9 @@ module.exports = {
     if (verbose)
       console.log(cid);
 
-    if (key)
-      const { publish } = await api.name.publish(cid, {key: key});
+    if (key) {
+      await api.name.publish(cid, {key: key});
+    }
 
     return cid;
   }
